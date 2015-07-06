@@ -1,6 +1,6 @@
 # business-insight-api-samples-java
 
-This is an example of an application written in java that authorises an user through the the authorization code flow.
+This is an example of an application written in Java that authorises to access the data from an user through [OAuth's](https://developer.nedap-bi.com/oauth/) [authorization code](https://developer.nedap-bi.com/oauth/grants/authorization_code) flow.
 The sample application acts as an client, that communicates with the authorization server at nedap-bi.com.
 For this example the OAuth2 library com.google.api-client is used.
 
@@ -28,6 +28,6 @@ Enter your API_KEY and API_SECRET in the file `OAuth2ClientSettings.java`
 - `mvn exec:java`
 -  navigate in your browser to `http://localhost:4567`
 
-If you are having issues make sure you use java 8 and have no other socket listening to 4567.
+If you are having issues make sure you use Java 8 and have no other socket listening to 4567.
 
 
