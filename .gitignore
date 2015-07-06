@@ -1,0 +1,15 @@
+/target/
+/bin/
+/build/
+
+.idea
+.settings
+.metadata/
+
+
+
+# OS Files #
+.DS_Store
+ 
+*.class
+

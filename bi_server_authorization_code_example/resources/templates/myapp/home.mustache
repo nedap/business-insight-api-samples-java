@@ -1,0 +1,27 @@
+<html>
+  <head>
+  	<title>My Awesome website</title>
+  </head>
+  <body style="font-size: 16px;"> 
+  	{{#user}}
+  	<div style="height:50px;">
+  		<div style="float: left; font-size: 18px;">Hello {{getName}}</div> 
+  		<div style="float: right;"><a href="/logout">logout</a></div>
+  		<div style="clear:both;"/> 
+  	</div>
+  	<div style="position:absolute;top: 50px; left:5px; right:5px; bottom:5px; overflow-y:scroll;">
+  	{{#getToken}}
+	  	{{#isValid}}
+		  <p>You currently have an token: {{getAuthToken}}, and it expires at {{expiresAt}}</p>
+		  <p>You can also revoke access <a href="/myapp/tokens/revoke">Revoke access</a></p>.
+		  
+		{{/isValid}}
+		{{^isValid}}
+		 	<p>You can now link with Business Insight by linking this link:</p> 
+  			<p><a href="{{auth_url}}">Link with business insight</a></p>
+		{{/isValid}}  		
+  	{{/getToken}}
+  	</div>
+  	{{/user}}
+  </body>
+</html>

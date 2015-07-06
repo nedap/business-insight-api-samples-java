@@ -1,0 +1,32 @@
+/target/
+/bin/
+/build/
+
+.idea
+.settings
+.metadata/
+.checkstyle
+
+
+# OS Files #
+.DS_Store
+ 
+*.class
+
+######################
+# Eclipse
+######################
+ 
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
