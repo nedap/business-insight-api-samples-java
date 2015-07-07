@@ -34,22 +34,22 @@ If you are having issues make sure you use Java 8 and have no other socket liste
 ## Getting started and project structure
 
 This section covers how to read the code to get a quick start.
-
+```
   |-- src  
   |   |-- main  
-  |       `-- java  
-  |           `-- com  
-  |               `-- nedap_bi  
-  |                   `-- examples  
-  |                       `-- server  
-  |                           `-- authorizationcode  
+  |       |-- java  
+  |           |-- com  
+  |               |-- nedap_bi  
+  |                   |-- examples  
+  |                       |-- server  
+  |                           |-- authorizationcode  
   |                               |-- controllers  
   |                               |-- helpers  
-  |                               `-- models  
+  |                               |-- models  
   |  
   |-- resources  
-  |   `-- templates  
-  
+  |   |-- templates  
+```  
 
 
 /src/main/java/com/nedap_bi/examples/server/authorizationcode/  
