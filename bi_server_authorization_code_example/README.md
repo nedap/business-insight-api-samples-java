@@ -35,40 +35,37 @@ If you are having issues make sure you use Java 8 and have no other socket liste
 
 This section covers how to read the code to get a quick start.
 
-  |-- src
-  |   |-- main
-  |       `-- java
-  |           `-- com
-  |               `-- nedap_bi
-  |                   `-- examples
-  |                       `-- server
-  |                           `-- authorizationcode
-  |                               |-- controllers
-  |                               |-- helpers
-  |                               `-- models
-  |
-  |-- resources
-  |   `-- templates
+  |-- src  
+  |   |-- main  
+  |       `-- java  
+  |           `-- com  
+  |               `-- nedap_bi  
+  |                   `-- examples  
+  |                       `-- server  
+  |                           `-- authorizationcode  
+  |                               |-- controllers  
+  |                               |-- helpers  
+  |                               `-- models  
+  |  
+  |-- resources  
+  |   `-- templates  
   
 
 
-/src/main/java/com/nedap_bi/examples/server/authorizationcode/ 
+/src/main/java/com/nedap_bi/examples/server/authorizationcode/  
+The Application main can be found in `App.java`, this is your starting endpoint.  
+`OAuth2ClientSettings.java` is where your app can be configured.  
 
-The Application main can be found in `App.java`, this is your starting endpoint.
-`OAuth2ClientSettings.java` is where your app can be configured.
-
-/src/main/java/com/nedap_bi/examples/server/authorizationcode/controllers
-OAuth authorization logic exists in `MyAppController.java`. Start here if you want to see how authorization works.
+/src/main/java/com/nedap_bi/examples/server/authorizationcode/controllers  
+OAuth authorization logic exists in `MyAppController.java`. Start here if you want to see how authorization works.  
 The authentication logic exists in `HomeController.java`.
 
-/src/main/java/com/nedap_bi/examples/server/authorizationcode/helper
+/src/main/java/com/nedap_bi/examples/server/authorizationcode/helper  
 This map is ment for all sort of helper methods used by the application.
-`OAuthHelper.java` contains all OAuth logic.
+`OAuthHelper.java` contains all OAuth logic.  
 
-/src/main/java/com/nedap_bi/examples/server/authorizationcode/models
-This map is ment for all kind of dummy models used by the application.
+/src/main/java/com/nedap_bi/examples/server/authorizationcode/models  
+This map is ment for all kind of dummy models used by the application.  
 
-/resources/templates/ 
+/resources/templates/  
 Contains all html templates. 
-
-
