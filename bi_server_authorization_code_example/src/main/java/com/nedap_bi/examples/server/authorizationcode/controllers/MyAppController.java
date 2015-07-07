@@ -24,6 +24,15 @@ import com.nedap_bi.examples.server.authorizationcode.helpers.OAuthHelper;
 import com.nedap_bi.examples.server.authorizationcode.helpers.SessionHelpers;
 import com.nedap_bi.examples.server.authorizationcode.models.User;
 
+/**
+ * Controller that handles the OAuth authorization and Callbacks.
+ * 
+ * Endpoints are:
+ *   /myapp/home - Initializes the authorization flow if no token is stored, otherwise shows token information.
+ *   /myapp/tokens/callback - Callback endpoint for the application. It handles successful and unsuccessful OAuth authorization requests.
+ *   /myapp/tokens/revoke - Revokes the OAuth token, so we can test the authorization flow again.
+ *   
+ */
 public class MyAppController {
 
 	/** Global instance of the HTTP transport. */
@@ -39,7 +48,6 @@ public class MyAppController {
 		this.HTTP_TRANSPORT = httpTransport;
 		this.JSON_FACTORY = jsonFactory;
 
-
 		/**
 		 * Authentication login!
 		 */
@@ -48,8 +56,7 @@ public class MyAppController {
 			if (userName == null || userName.length() == 0) {
 				halt(401, "Go away, this is an restricted area!");
 			}			
-			user = SessionHelpers.buildUser(request);
-			
+			user = SessionHelpers.buildUser(request);			
 		});
 
 		/**
@@ -108,7 +115,6 @@ public class MyAppController {
 			Response response) {
 		// handle errors here, access denied errors.
 		// Dummy method.
-
 	}
 
 	private void handleTokenRequest(String authToken, User user,
@@ -132,6 +138,5 @@ public class MyAppController {
 			System.out.println("exception");
 			// handle exception when server does not respond.
 		}
-
 	}
 }

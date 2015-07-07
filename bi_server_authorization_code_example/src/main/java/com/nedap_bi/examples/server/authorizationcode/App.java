@@ -30,7 +30,7 @@ public class App {
 
 	public static void main(String[] args) {
 		try {
-			// Data store for tokens
+			// Data store for tokens.
 			DATA_STORE_FACTORY = new FileDataStoreFactory(DATA_STORE_DIR);
 			
 		} catch (IOException e) {
@@ -38,10 +38,23 @@ public class App {
 			e.printStackTrace();
 		}
 		// This sample allows only one user connecting to the website.
-		// It
-	
+
+		/**
+		 * HomeController is where user authentication occurs.
+		 * Not OAuth logic is found here.
+		 */
 		new HomeController();
+		
+		/**
+		 * MyAppController is where the OAuth authentication takes place.
+		 * To get a quick look of the project, start here.
+		 */
 		new MyAppController(HTTP_TRANSPORT, JSON_FACTORY );
+		
+		
+		/**
+		 * Sample background job in the application that queries the api.
+		 */
 		new ApiRequestHandler(HTTP_TRANSPORT, JSON_FACTORY)
 				.getDataFromApi();
 
